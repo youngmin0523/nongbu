@@ -2,6 +2,7 @@
 농산물 선물거래 플랫폼(농부아지야) - YIS
 
 ## 웹 시연 영상
+- 전체 화면으로 보시면 비교적 깨끗합니다!
 <https://youtu.be/wFBMzlVzSnM>
 
 ## install
