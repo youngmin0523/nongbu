@@ -1,6 +1,10 @@
 # nongbu
 농산물 선물거래 플랫폼(농부아지야) - YIS
 
+## install
+1. Spring Boot 프로젝트를 pull request 한 후, gradlew build를 통해 build 실행
+2. build/libs 디렉토리 안 jar파일 실행
+
 ## 프로젝트 설명 및 시연 자료
 ![image](https://user-images.githubusercontent.com/123279529/223429016-ec041ded-9ba8-4f8b-818f-2c1930e8baf2.png)
 ![2](https://user-images.githubusercontent.com/123279529/223429257-7b9e17a9-2f86-4334-b8cf-3124e7c8f978.png)
