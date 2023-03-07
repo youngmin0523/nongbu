@@ -3,7 +3,7 @@
 
 ## 웹 시연 영상
 - 전체 화면으로 보시면 비교적 깨끗합니다!
-<https://youtu.be/wFBMzlVzSnM>
+- <https://youtu.be/wFBMzlVzSnM>
 
 ## install
 1. Spring Boot 프로젝트를 pull request 한 후, gradlew build를 통해 build 실행
