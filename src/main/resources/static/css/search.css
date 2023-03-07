@@ -1,0 +1,104 @@
+nav{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.top-topic{
+    margin: 40px auto;
+    max-width: 1000px;
+}
+.top-topic h{
+    font-size: 20px;
+    font-weight: bold;
+}
+.contents{
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.search{
+    overflow: hidden;
+}
+.search-contents{
+    width: 920px;
+    height: 40px;
+    border-radius: 20px;
+    float: left;
+}
+.search-submit{
+    float: left;
+}
+
+.hash-tag{
+    overflow: hidden;
+}
+.hash-tag li{
+    float: left;
+    text-align: center;
+    border: 1px solid #e1dedf;
+    border-radius: 18px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+}
+
+.contents{
+    margin-bottom: 100px;
+}
+
+/* 곡물 */
+.grain{
+    margin-top: 40px;
+    overflow: hidden;
+}
+.grain img{
+    float: left;
+    height: 220px;
+    width: 220px;
+    margin: 0 10px;
+}
+.grain h{
+    font-weight: bold;
+    font-size: 20px;
+}
+.grain ul{
+    margin-top: 10px;
+}
+
+/* 과일 */
+.fruit{
+    margin-top: 40px;
+    overflow: hidden;
+}
+.fruit img{
+    float: left;
+    height: 220px;
+    width: 220px;
+    margin: 0 10px;
+}
+.fruit h{
+    font-weight: bold;
+    font-size: 20px;
+}
+.fruit ul{
+    margin-top: 10px;
+}
+
+/* 채소 */
+.vegetable{
+    margin-top: 40px;
+    overflow: hidden;
+}
+.vegetable img{
+    float: left;
+    height: 220px;
+    width: 220px;
+    margin: 0 10px;
+}
+.vegetable h{
+    font-weight: bold;
+    font-size: 20px;
+}
+.vegetable ul{
+    margin-top: 10px;
+}

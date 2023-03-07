@@ -1,0 +1,25 @@
+#buttons{
+    top: 15px;
+    left:330px;
+    display: inline-block;
+    position: relative;
+}
+
+.btmBtnLine {
+    color: #595959;
+    font-weight: 400;
+    font-family: 'Noto Sans KR','Spoqa Han Sans','맑은 고딕','Malgun Gothic','돋움','dotum','sans-serif';
+    display: inline-block;
+    list-style: none;
+}
+
+.btnPrev, .btnNext{
+    list-style: none;
+    font-family: inherit!important;
+    cursor: pointer;
+    border: 1px solid #ececec;
+    background: #fff center no-repeat;
+    color: #000;
+    font-size: 20px;
+
+}

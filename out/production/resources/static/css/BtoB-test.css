@@ -1,0 +1,157 @@
+.container {
+    margin-bottom: 200px;
+}
+
+.mainImg {
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-bottom: 35px;
+}
+
+.search {
+    position: relative;
+    width: 700px;
+    height: 40px;
+    box-shadow: 0px 0px 2.5px gray;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.search:hover {
+    box-shadow: 0px 0px 5px gray;
+}
+
+#searchbox {
+    width: 630px;
+    border: 0px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 20px;
+    float: left;
+    padding-top: 12px;
+    padding-left: 83px;
+    text-align: center;
+}
+
+.searchBtn {
+    width: 50px;
+    height: 40px;
+    border: 0px;
+    background-color: gray;
+    color: black;
+    outline: none;
+    float: right;
+    font-size: 16px;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px;
+}
+
+.searchBtn:hover {
+    color: white;
+    background: rgb(158, 158, 158);
+    box-shadow: 0px 0px 5px gray;
+}
+
+.openBtn {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    display: block;
+    background-color: gray;
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    box-shadow: 0px 0px 2.5px gray;
+}
+
+.openBtn:hover {
+    color: white;
+    background: rgb(158, 158, 158);
+    box-shadow: 0px 0px 5px gray;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalBox {
+    position: absolute;
+    background-color: #fff;
+    width: 700px;
+    height: 400px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.modalBox button {
+    display: block;
+    width: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+.submit {
+    width: 80px;
+    height: 35px;
+    display: block;
+    background-color: gray;
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    box-shadow: 0px 0px 2.5px gray;
+    padding: 0px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.submit:hover {
+    color: white;
+    background: rgb(158, 158, 158);
+    box-shadow: 0px 0px 5px gray;
+}
+
+.closeBtn {
+    background-color: white;
+    border: 0px;
+}
+
+
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(221, 221, 221);
+    border: 1px solid #444444;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #444444;
+    padding: 10px;
+}

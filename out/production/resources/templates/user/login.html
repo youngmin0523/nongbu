@@ -1,0 +1,112 @@
+<!--
+https://codepen.io/bradtraversy/pen/ZEGGNRb
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <link   th:href="@{/css/user/login.css}"
+            href="../../static/css/user/login.css" rel="stylesheet">
+
+    <script src="../../static/js/login.js" rel="script"></script>
+
+
+    <title>Title</title>
+    <!--
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+    </script>-->
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+        <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+        <ul class="main-menu">
+            <li><a href="../index.html"
+                   th:href="@{/}">농부아지야</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/login.html"
+                   th:href="@{/account/login}">로그인</a>
+                <a sec:authorize="isAuthenticated()"
+                   href="/doLogout">로그아웃</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/join.html"
+                   th:href="@{/account/join}"
+                >회원가입</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAuthenticated()"
+                   href="#"
+                   th:onclick="|location.href='@{/test/mypage-customer}'|"
+                   type="button">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="img">
+    <img
+            th:src="@{/img/로고.PNG}"/>
+</div>
+
+<div class="title">
+    <p>로그인</p>
+</div>
+
+<!--item content-->
+<div class = "login">
+    <section>
+        <!-- 생산자,소비자 선택 버튼-->
+
+        <!-- e-mail / id -->
+        <div class = form>
+            <form method="post" action="/doLogin">
+                <div>
+                <p>아이디(이메일)</p>
+                <input id ="id" type="text" name="username" title="username">
+                </div>
+        <!-- 패스워드 -->
+                <div>
+                <p>비밀번호</p>
+                <input id="pw" type="password" name="pw" title="PW">
+                </div>
+        <!-- 로그인 실행-->
+                <input id="login" href="/doLogin" class="" type="submit" value="시작">
+            </form>
+        </div>
+
+    </section>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어 </div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!--
+https://codepen.io/bradtraversy/pen/ZEGGNRb
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/user/join.css}"
+          href="../../static/css/user/join.css" rel="stylesheet">
+
+    <link th:href="@{/css/item-test.css}"
+          href="../../static/css/item-test.css" rel="stylesheet">
+
+    <script src="../static/js/join.js" rel="script"></script>
+
+
+    <title>Title</title>
+
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+        <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+        <ul class="main-menu">
+            <li><a href="../index.html"
+                   th:href="@{/}">농부아지야</a></li>
+            <li><a href="#">데이터확인</a></li>
+            <li><a href="#">선물거래</a></li>
+            <li><a href="#">뉴스정보</a></li>
+            <li><a href="#">크라우드펀딩(진행예정)</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/login.html"
+                   th:onclick="|location.href='@{/account/login}'|">로그인</a>
+                <a sec:authorize="isAuthenticated()"
+                   href="/doLogout">로그아웃</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/join.html"
+                   th:onclick="|location.href='@{/account/join}'|"
+                >회원가입</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAuthenticated()"
+                   href="#"
+                   th:onclick="|location.href='@{/test/mypage-customer}'|"
+                   type="button">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="img">
+    <img
+            th:src="@{/img/로고.PNG}"/>
+</div>
+
+<div class="title">
+    <p>회원가입</p>
+</div>
+
+<!--item content-->
+<div class="join">
+    <section>
+        <!-- e-mail / id -->
+        <form method="post">
+            <div class="input-form">
+                <div>
+                    <p>아이디(이메일)</p>
+                    <input type="text" id="userEmail" name="userEmail" title="email">
+                </div>
+
+                <!-- 패스워드 -->
+                <div>
+                    <p>비밀번호</p>
+                    <input type="password" id="userPw" name="userPw" title="password">
+                </div>
+
+                <!-- 이름 -->
+                <div>
+                    <p>이름</p>
+                    <input type="text" id="userName" name="userName" title="name">
+                </div>
+
+                <!-- 전화번호 -->
+                <div>
+                    <p>전화번호</p>
+                    <input type="text" id="mobileNumber" name="mobileNumber" title="phone_number">
+                </div>
+
+                <!-- 생산자 체크 -->
+                <div class="check">
+                    <p>생산자여부</p>
+                    <button
+                            type="button"
+                            id="checkOK"
+                            onclick="doDisplay()">해당있음</button>
+                    <button
+                            type="button"
+                            id="checkNO"
+                            onclick="dontDisplay()">해당없음</button>
+                </div>
+                <div id = "inputFarm" class="input-farm">
+                    <input id="input_farm_form"placeholder="사업자 번호 입력">
+                </div>
+            </div>
+
+            <div class="bottom">
+                <button
+                        type="button"
+                        class="back-btn"
+                        th:onclick="|location.href='@{/}'|">
+                    <h>이전으로</h>
+                </button>
+                <button class="join-btn"
+                        type="submit">
+                    <h>가입하기</h>
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어</div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+<script type="text/javascript">
+    function doDisplay(){
+        document.getElementById('checkOK').style.background="#12b564";
+        document.getElementById('checkOK').style.color="#ffffff";
+        document.getElementById('checkNO').style.background="#ffffff";
+        document.getElementById('checkNO').style.color="#000000";
+        document.getElementById('inputFarm').style.display ="block";
+    }
+    function dontDisplay(){
+        document.getElementById('checkOK').style.background="#ffffff";
+        document.getElementById('checkOK').style.color="#000000";
+        document.getElementById('checkNO').style.background="#12b564";
+        document.getElementById('checkNO').style.color="#ffffff";
+        document.getElementById('inputFarm').style.display = "none";
+    }
+
+</script>
+</html>

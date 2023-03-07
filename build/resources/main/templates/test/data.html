@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link   th:href="@{/css/item-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="main-nav">
+    <test th:onclick="|location.href='@{/test}'|"
+          type="button">농부아지야</test>
+    <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+    <ul class="main-menu">
+        <li><a href="#">데이터확인</a></li>
+        <li><a href="#">선물거래</a></li>
+        <li><a href="#">뉴스정보</a></li>
+        <li><a href="#">크라우드펀딩(진행예정)</a></li>
+    </ul>
+
+    <ul class="right-menu">
+        <li>
+            <a href="#"
+               th:onclick="|location.href='@{/test/login-real}'|"
+               type="button">>로그인</a>
+            <a style="display: none" href="#">로그아웃</a>
+        </li>
+        <li>
+            <a href="#"
+               th:onclick="|location.href='@{/test/join}'|"
+               type="button">회원가입</a>
+            <a style="display: none" href='#'>정보수정</a>
+        </li>
+        <li>
+            <a href="#"
+               th:onclick="|location.href='@{/test/mypage-customer}'|"
+               type="button">마이페이지</a>
+        </li>
+    </ul>
+</nav>
+<div style="text-align: center">
+    <h style="font-size: 15px;">예시 스크린 샷 </h>
+    <div style="margin-top: 100px;">
+        <img th:src="@{/img/data_1.jpg}">
+    </div>
+    <div style="margin-top: 50px;">
+        <img th:src="@{/img/data_2.png}">
+    </div>
+</div>
+</body>
+</html>

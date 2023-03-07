@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <link   th:href="@{/css/search.css}"
+            href="../../static/css/search.css" rel="stylesheet">
+
+    <link   th:href="@{/css/mainpage.css}"
+            href="../../static/css/mainpage.css" rel="stylesheet">
+
+    <title>Title</title>
+
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+        <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+        <ul class="main-menu">
+            <li><a href="../index.html"
+                   th:href="@{/}">농부아지야</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/login.html"
+                   th:onclick="|location.href='@{/account/login}'|">로그인</a>
+                <a sec:authorize="isAuthenticated()"
+                   href="/doLogout">로그아웃</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/join.html"
+                   th:onclick="|location.href='@{/account/join}'|"
+                >회원가입</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAuthenticated()"
+                   href="#"
+                   th:onclick="|location.href='@{/test/mypage-customer}'|"
+                   type="button">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<!--item content-->
+<!-- 주제 로고 및 설명 -->
+<section class="top-topic">
+    <div>
+        <h>경북에서 제일 저렴한 농산물</h>
+    </div>
+    <div class="logo">
+        <img src="../../static/img/로고.PNG"
+             th:src="@{/img/로고.PNG}"/>
+    </div>
+</section>
+
+<!-- 내용 -->
+<section class="contents">
+    <!-- 검색-->
+    <div class="search">
+        <form action="#" method="post">
+            <input type="text" class="search-contents">
+            <img    class="search-submit"
+                    src="../../static/img/search.PNG"
+                    th:src="@{/img/search.PNG}"/>
+        </form>
+    </div>
+
+    <!-- 해시태그-->
+    <div class="hash-tag">
+        <ul>
+            <li><a>#사과</a></li>
+            <li><a>#쌀</a></li>
+            <li><a>#포도</a></li>
+        </ul>
+    </div>
+
+    <!-- 곡물 -->
+    <div class="grain">
+        <h>곡물</h>
+        <ul>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+        </ul>
+    </div>
+
+    <!-- 과일 -->
+    <div class="fruit">
+        <h>과일</h>
+        <ul>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+        </ul>
+    </div>
+
+    <!-- 채소 -->
+    <div class="vegetable">
+        <h>채소</h>
+        <ul>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+            <li>
+                <img src="../../static/img/test.PNG"
+                     th:src="@{/img/test.PNG}">
+            </li>
+        </ul>
+    </div>
+
+
+</section>
+
+<div>
+
+
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어</div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>

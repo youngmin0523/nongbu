@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link   th:href="@{/css/item-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<section style="width: 1300px; margin: 0 auto; margin-top: 200px;">
+    <div>
+        <div style="float: left; margin-left: 50px; width: 300px; height: 200px;">
+            <Button style="width: 250px; height: 150px;"
+                    th:onclick="|location.href='@{/test/data}'|"
+                    type="button">
+                데이터센터
+            </Button>
+        </div>
+        <div style="float: left; margin-left: 50px; width: 300px; height: 200px;">
+            <Button style="width: 250px; height: 150px;"
+            th:onclick="|location.href='@{/test/search}'|"
+            type="button">
+                선물거래
+            </Button>
+        </div>
+        <div style="float: left; margin-left: 50px; width: 300px; height: 200px;">
+            <Button style="width: 250px; height: 150px;">
+                크라우드펀딩(준비예정)
+            </Button>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

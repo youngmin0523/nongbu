@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.service'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.projectlombok:lombok:1.18.20'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//스프링 시큐리티
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	//타임리프 시큐리티
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
+	//실시간 업데이트 반영
+	implementation 'org.springframework.boot:spring-boot-devtools'
+
+	//mysql connect -> https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.29
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

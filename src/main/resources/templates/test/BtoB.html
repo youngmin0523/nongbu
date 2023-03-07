@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+
+    <link   th:href="@{/css/main-test.css}" rel="stylesheet">
+    <link   th:href="@{/css/item-test-BtoB.css}" rel="stylesheet">
+    <link   th:href="@{/css/main-test-BtoB.css}" rel="stylesheet">
+
+    <!--
+    <link href="../../../../../../코드%20병합용/Final%20Project/main-test.css" rel="stylesheet">
+    <link href="../../../../../../코드%20병합용/Final%20Project/item-test.css" rel="stylesheet">
+    <link href="../../../../../../코드%20병합용/Final%20Project/BtoB-test.css" rel="stylesheet">
+    -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <title>BtoB 계약재배 첫페이지</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="main-nav">
+
+
+            <!--왼쪽 메뉴 네비게이션-->
+            <ul class="main-menu">
+                <li><a href="endpage.html">데이터확인</a></li>
+                <li><a href="endpage.html">선물거래</a></li>
+                <li><a href="endpage.html">뉴스정보</a></li>
+                <li><a href="endpage.html">크라우드펀딩(진행예정)</a></li>
+            </ul>
+
+            <!--오른쪽 메뉴 네비게이션-->
+            <ul class="right-menu">
+                <li>
+                    <a href="endpage.html">로그인</a>
+                    <a style="display: none" href="endpage.html">로그아웃</a>
+                </li>
+                <li>
+                    <a href="endpage.html">회원가입</a>
+                    <a style="display: none" href='endpage.html'>정보수정</a>
+                </li>
+                <li>
+                    <a href="endpage.html">마이페이지</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!--item content-->
+        <section>
+            <!--검색창-->
+            <div style="text-align:center">
+                <br><br>
+                <h1>설명이 들어갈 공간</h1>
+                <br><br><br><br><br>
+                <h1>설명이 들어갈 공간</h1>
+                <br><br><br><br><br>
+                <h1>설명이 들어갈 공간</h1>
+                <br><br><br><br><br>
+                <h1>설명이 들어갈 공간</h1>
+                <br><br><br><br><br>
+                <h1>설명이 들어갈 공간</h1>
+                <br><br><br><br><br>
+                <h1>설명이 들어갈 공간</h1>
+                <br><br><br><br><br>
+            </div>
+
+            <!--검색창-->
+            <div class="search">
+                <form action="#" method="get">
+                    <input id="searchbox" type="text" name="searchWord" placeholder="검색어를 입력해주세요."
+                        onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력해주세요.'" autocomplete="off">
+                    <input type="submit" class="searchBtn" value="검색">
+                </form>
+            </div>
+
+            <!--상세 검색 모달 페이지-->
+            <div style="text-align: center">
+                <button class="openBtn">상세 검색</button>
+                <div class="modal hidden">
+                    <div class="bg"></div>
+                    <span class="modalBox">
+                        <form action="#" method="get">
+                            <table>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <td>
+                                        <select class="form-control" id="categoryA" name="categoryA"
+                                            onchange="categoryAChange(this)" style="width:80px; height:30px;">
+                                            <option>선택</option>
+                                            <option value="과일">과일</option>
+                                            <option value="채소">채소</option>
+                                            <option value="작물">작물</option>
+                                        </select>
+                                        &nbsp;
+                                        <select class="form-control" id="categoryB" name="categoryB"
+                                            onchange="categoryBChange(this)" style="width:80px; height:30px;"></select>
+                                        &nbsp;
+                                        <select class="form-control" id="categoryC" name="categoryC"
+                                            style="width:80px; height:30px;"></select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>예상 출하 시기</th>
+                                    <td>
+                                        <input type="text" id="datepicker1" name="dateA"
+                                            style="width:80px; height:30px;" autocomplete="off"> ~
+                                        <input type="text" id="datepicker2" name="dateB"
+                                            style="width:80px; height:30px;" autocomplete="off">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>지역</th>
+                                    <td>
+                                        <select class="form-control" id="regionA" name="regionA"
+                                            onchange="regionChange(this)" style="width:80px; height:30px;">
+                                            <option>선택</option>
+                                            <option value="경상남도">경상남도</option>
+                                            <option value="경상북도">경상북도</option>
+                                            <option value="강원도">강원도</option>
+                                        </select>
+                                        &nbsp;
+                                        <select class="form-control" id="regionB" name="regionB"
+                                            style="width:80px; height:30px;"></select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>kg당 가격(원)</th>
+                                    <td>
+                                        <select class="form-control" id="priceA" name="priceA"
+                                            style="width:80px; height:30px;" onchange="priceChange(this)">
+                                            <option>선택</option>
+                                            <option value="0">0</option>
+                                            <option value="5000">5000</option>
+                                            <option value="10000">10000</option>
+                                            <option value="15000">15000</option>
+                                            <option value="20000">20000</option>
+                                            <option value="25000">25000</option>
+                                        </select>
+                                        ~
+                                        <select class="form-control" id="priceB" name="priceB"
+                                            style="width:80px; height:30px;"></select>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <button class="closeBtn"
+                                    th:onclick="|location.href='@{/test}'|"
+                                    type="button">검색</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div><i class="fas fa-globe fa-2x"></i> 한국어 </div>
+            <ul>
+                <li><a href="https://www.nongnet.or.kr/index.do" target="_blank">농넷</a></li>
+                <li><a href="https://www.kamis.or.kr/customer/main/main.do" target="_blank">KAMIS</a></li>
+                <li><a href="https://kosis.kr/statHtml/statHtml.do?orgId=678&tblId=DT_67801_E000020&conn_path=I2"
+                        target="_blank">한국농어촌공사</a></li>
+                <li><a href="https://www.yu.ac.kr/main/index.do" target="_blank">영남대학교</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="../../../../../../코드%20병합용/Final%20Project/modal.js"
+            th:src="@{/js/modal.js}"></script>
+    <script type="text/javascript" src="../../../../../../코드%20병합용/Final%20Project/changer.js"
+            th:src="@{/js/changer.js}"></script>
+    <script type="text/javascript" src="../../../../../../코드%20병합용/Final%20Project/datepicker.js"
+            th:src="@{/js/datepicker.js}"></script>
+</body>
+
+</html>

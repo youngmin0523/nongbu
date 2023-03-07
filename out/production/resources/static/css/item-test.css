@@ -1,0 +1,64 @@
+button{
+    font-size: 30px;
+}
+
+/* graph */
+.graph{
+    margin-top: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+.graph-img1{
+    width: 50%;
+    float: left;
+}
+.graph-img2{
+    width: 50%;
+}
+
+/* item- title */
+.item-title{
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    text-align-last: center;
+}
+
+.item-title-img{
+    float: left;
+    width: 50%;
+}
+
+.item-title-content{
+    margin-left: 300px;
+    font-size: 30px;
+}
+
+
+/* item contents */
+.item-contents{
+    background: #cdcdcd;
+    height: 3000px;
+}
+
+/* item button */
+.item-button{
+    margin-top: 30px;
+    text-align: center;
+}
+.item-button-content{
+    font-size: 60px;
+    border: white;
+    border-radius: 20px;
+    background: lightgreen;
+    width: 300px;
+    margin: 10px;
+}
+
+/* chat btn */
+.chat-btn{
+    border-radius: 15px;
+    background: lawngreen;
+    width: 200px;
+    height: 70px;
+}

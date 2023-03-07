@@ -1,0 +1,159 @@
+<!--
+https://codepen.io/bradtraversy/pen/ZEGGNRb
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link   th:href="@{/css/mypage-customer.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link   th:href="@{/css/item-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+
+    <title>Title</title>
+    <!--
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+    </script>-->
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<!-- Nav -->
+<nav class="main-nav">
+    <test>농부아지야</test>
+    <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+    <ul class="main-menu">
+        <li><a href="#">데이터확인</a></li>
+        <li><a href="#">선물거래</a></li>
+        <li><a href="#">뉴스정보</a></li>
+        <li><a href="#">크라우드펀딩(진행예정)</a></li>
+    </ul>
+
+    <ul class="right-menu">
+        <li>
+            <a style="display: none" href="#">로그인</a>
+            <a href="/doLogout">로그아웃</a>
+        </li>
+        <li>
+            <a style="display: none" href="#"
+               th:onclick="|location.href='@{/test/join}'|"
+               type="button">>회원가입</a>
+            <a href='#'>정보수정</a>
+        </li>
+        <li>
+            <a href="#"
+               th:onclick="|location.href='@{/test/mypage-customer}'|"
+               type="button">마이페이지</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="logo">
+    <img
+            th:src="@{/img/로고.PNG}"/>
+</div>
+
+<div class="container">
+
+    <p class="page-name">마이페이지(소비자)</p>
+
+    <!-- 상위 내용 -->
+    <section class = "section-title">
+        <div class="userinfo">
+            <p class ="username">안녕하세요, "userName" 님</p>
+            <button class="edit-button"> 개인정보 수정</button>
+            <button class="logout-button">로그아웃</button>
+        </div>
+        <hr>
+
+        <!-- 내용 선택 버튼-->
+        <div class = "section-contents-list">
+            <div class="section-contents-button">
+                거래중인물품(1)
+            </div>
+            <div style="border-bottom: none; color: #cbcbcb;" class="section-contents-button">
+                요청중인물품(2)
+            </div>
+            <div style="border-bottom: none; color: #cbcbcb;"  class="section-contents-button">
+                즐겨찾기(6)
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- 하단 내용 -->
+    <section class="section-contents">
+        <!-- 진행중인 물품-->
+        <div >
+            <ul class="contents-ul">
+                <li>
+                    <img    class="img"
+                            th:src="@{/img/복숭아.jpeg}">
+                    <p>경산 하우스 복숭아</p>
+                    <div>
+                        <button class="offer-button">판매자 정보</button>
+                        <button class="item-edit-button">계약서 확인</button>
+                        <button class="item-edit-button">정보 요청</button>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- 요청중인 물품-->
+        <div style="display: none">
+            <ul class="contents-ul">
+                <li>
+                    <img    class="img"
+                            th:src="@{/img/사과.PNG}">
+                    <p>고당도 대구 꿀 사과</p>
+                    <div>
+                        <button class="offer-button">견적요청보기</button>
+                        <button class="item-edit-button">채팅하기</button>
+                    </div>
+                </li>
+                <li>
+                    <img    class="img"
+                            th:src="@{/img/아오리사과.jpg}">
+                    <p>최저가 아오리 사과</p>
+                    <div>
+                        <button class="offer-button">견적요청보기</button>
+                        <button class="item-edit-button">요청수정하기</button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- 즐겨찾기 -->
+        <div style="display: none">
+        </div>
+    </section>
+
+
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어 </div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+.select-top{
+    padding: 20px;
+    height: 400px;
+    text-align: -webkit-center;
+    margin-top: 100px;
+}
+
+.select-supply{
+    float:left;
+}
+
+.select-demand{
+    margin-left: 50px;
+    float: left;
+}
+
+.select-button{
+    width: 250px;
+    height: 250px;
+    font-size: 40px;
+    color: #12b564;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+}

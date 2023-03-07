@@ -1,0 +1,203 @@
+<!--
+https://codepen.io/bradtraversy/pen/ZEGGNRb
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link   th:href="@{/css/main-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link   th:href="@{/css/item-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Title</title>
+    <!--
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+    </script>-->
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+        <test>농부아지야</test>
+        <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+        <ul class="main-menu">
+            <li><a href="#">데이터확인</a></li>
+            <li><a href="#">선물거래</a></li>
+            <li><a href="#">뉴스정보</a></li>
+            <li><a href="#">크라우드펀딩(진행예정)</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a href="#"
+                   th:onclick="|location.href='@{/test/login-real}'|"
+                   type="button">>로그인</a>
+                <a style="display: none" href="#">로그아웃</a>
+            </li>
+            <li>
+                <a href="#"
+                   th:onclick="|location.href='@{/test/join}'|"
+                   type="button">회원가입</a>
+                <a style="display: none" href='#'>정보수정</a>
+            </li>
+            <li>
+                <a href="#"
+                   th:onclick="|location.href='@{/test/mypage-customer}'|"
+                   type="button">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <ul/>
+    <!-- 그래프 -->
+    <section class="graph">
+        <img    class="graph-img1"
+                th:src="@{/img/데이터.PNG}"/>
+        <img    class="graph-img2"
+                th:src="@{/img/데이터2.PNG}"/>
+    </section>
+
+    <ul/>
+
+    <!-- Item title -->
+
+    <section class="item-title">
+        <div class="item-title-img">
+            <img th:src="@{/img/사과.png}"
+                 src="/img/사과.png"/>
+        </div>
+        <div class="item-title-content">
+            <h1>청송 사과</h1>
+            <p>국내산 청송사과</p>
+            <p>거래 기간 : 2022.04.20~ 22.05.21</p>
+            <p>예상 수확일 : 7~8월
+        </div>
+    </section>
+
+
+    <!--item content-->
+
+    <section>
+        <div class="item-contents">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Follow -->
+    <!--
+    <section class="follow">
+        <p>Follow Microsoft</p>
+        <a href="https://facebook.com">
+            <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com">
+            <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
+        </a>
+        <a href="https://linkedin.com">
+            <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin">
+        </a>
+    </section>
+    -->
+</div>
+
+
+<!-- button -->
+<section>
+    <div class="item-button">
+        <button class="item-button-content">
+            거래요청
+        </button>
+
+        <button class="item-button-content">
+            목록보기
+        </button>
+    </div>
+</section>
+
+
+<!-- Links -->
+<section class="links">
+    <div class="links-inner">
+        <P>농산물 품목별 가격 및 반입량 정보 제공</P>
+        <p>농산물 시장 가격 및 수요 예측 및 제공</p>
+        <p>농산물 현물 및 선물 거래 플랫폼 제공</p>
+        <!--
+        <ul>
+            <li><h3>사이트 바로가기</h3></li>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#"><영남대학교></영남대학교></a></li>
+        </ul>
+        <ul>
+            <li><h3>Microsoft Store</h3></li>
+            <li><a href="#">Account Profile</a></li>
+            <li><a href="#">Download Center</a></li>
+            <li><a href="#">Microsoft Store support</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Older tracking</a></li>
+        </ul>
+        <ul>
+            <li><h3>Education</h3></li>
+            <li><a href="#">Microsfot in education</a></li>
+            <li><a href="#">Office for students</a></li>
+            <li><a href="#">Office 365 for schools</a></li>
+            <li><a href="#">Deals for studentss</a></li>
+            <li><a href="#">Microsfot Azure</a></li>
+        </ul>
+        <ul>
+            <li><h3>Enterprise</h3></li>
+            <li><a href="#">Azure</a></li>
+            <li><a href="#">AppSource</a></li>
+            <li><a href="#">Automotive</a></li>
+            <li><a href="#">Government</a></li>
+            <li><a href="#">Healthcare</a></li>
+        </ul>
+        <ul>
+            <li><h3>Developer</h3></li>
+            <li><a href="#">Visual Studio</a></li>
+            <li><a href="#">Windowszs Dev Center</a></li>
+            <li><a href="#">Developer Network</a></li>
+            <li><a href="#">TechNet</a></li>
+            <li><a href="#">Microsoft Developer</a></li>
+        </ul>
+        <ul>
+            <li><h3>Company</h3></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Microsoft</a></li>
+            <li><a href="#">Company news</a></li>
+            <li><a href="#">Privacy at Microsoft</a></li>
+            <li><a href="#">Inverstors</a></li>
+        </ul>-->
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어 </div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

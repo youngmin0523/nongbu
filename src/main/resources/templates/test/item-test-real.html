@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link   th:href="@{/css/item-test-real.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link   th:href="@{/css/item-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Title</title>
+    <!--
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+    </script>-->
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+        <test>농부아지야</test>
+        <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+        <ul class="main-menu">
+            <li><a href="#">데이터확인</a></li>
+            <li><a href="#">선물거래</a></li>
+            <li><a href="#">뉴스정보</a></li>
+            <li><a href="#">크라우드펀딩(진행예정)</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a href="#"
+                   th:onclick="|location.href='@{/test/login-real}'|"
+                   type="button">>로그인</a>
+                <a style="display: none" href="#">로그아웃</a>
+            </li>
+            <li>
+                <a href="#"
+                   th:onclick="|location.href='@{/test/join}'|"
+                   type="button">회원가입</a>
+                <a style="display: none" href='#'>정보수정</a>
+            </li>
+            <li>
+                <a href="#"
+                   th:onclick="|location.href='@{/test/mypage-customer}'|"
+                   type="button">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!--item content-->
+
+    <section>
+        <div class="oContainer contentsArea" id="sec_product_view">
+
+            <div class="currentPath">
+
+
+                <a href="/">Home ></a>
+                <a href="/">
+                    상품 >
+                </a>
+                <a href="/">
+
+                    <strong>사과</strong>
+                </a>
+            </div>
+            <div class="detailTopInfo">
+                <div class="innerBox">
+                    <div class="imgsArea">
+                        <div class="imgWrap">
+                            <img src="ex4_2.jpg"
+                                 th:src="@{/img/ex4_2.jpg}"
+                                 alt="상품이미지" />
+                        </div>
+                        <div class="togetherBuy">
+                            <h4>
+
+                                농장 정보
+
+                            </h4>
+                            <div class="contBody">
+                                <div class="listUl bxslider">
+
+                                    <div class="listLi">
+
+                                        <!--<a href="/product/detail/38279-1039278" class="liImage">-->
+
+                                        <img src="ex4_3.PNG"
+                                             th:src="@{/img/ex4_3.PNG}"
+                                             alt="농부이미지">
+
+                                        <span>농장 이름 : 사과농장....</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textArea">
+                        <div class="textSubject">
+                            <div class="infoBadges">
+
+
+
+
+                                <span class="badge_deliveryEarly oDialog_trigger">농부아지야배송</span>
+
+                            </div>
+                            <h3>
+
+                                [계약재배] 사과 아오리
+                            </h3>
+
+                            <p>공급가 회원공개</p>
+
+
+                        </div>
+                        <div class="textContents">
+                            <dl>
+
+                                <div class="price">
+                                    <hr>
+                                    <dt>가격</dt><dd>별도 협의</dd>
+                                    <hr>
+                                    <dt>등급규격</dt><dd>AA - 7다이</dd>
+                                    <hr>
+                                    <dt>판매단위</dt><dd>100/500/1000kg</dd>
+                                    <hr>
+                                    <dt>배송조건</dt><dd>별도 협의</dd>
+                                    <hr>
+                                </div>
+                                <div class="selectitem">
+                                    <dt >옵션 선택</dt>
+                                    <dd>
+                                        <select>
+                                            <option>옵션선택</option>
+                                            <option>사과 아오리 100kg / 7다이</option>
+                                            <option>사과 아오리 500kg / 7다이</option>
+                                            <option>사과 아오리 1000kg / 7다이</option>
+                                        </select>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="btnArea">
+                            <a href="#" class="btn_detailMyCart" onclick="location.href='index.html'">거래요청</a>
+                            <a href="#" class="btn_detailBuy">장바구니</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 상품상세정보 -->
+            <div class="pViewTabCon" id="pViewTabCon">
+                <div class="pViewTab" id="pViewTab">
+                    <ul class="tabList">
+                        <li data-idx="1" class="on"><a href="#" class="tabBtn btn01" data-tab="1">상품정보</a></li>
+                        <li data-idx="2"><a href="#" class="tabBtn btn02" data-tab="2">Q&A</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="pViewCon">
+                    <div class="wd900 tab1" style="min-height: 700px">
+                        <div class="pViewCon_recovery">
+                        </div>
+                        <p style="text-align: center;" align="center"><img src="https://oasis.co.kr:9888/view/se/?imagePath=2021/9/2/se_2021c0b6d05c-4483-4113-bbdd-30e4b1d8bd6f.jpg"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><img src="https://oasis.co.kr:9888/view/se/?imagePath=2021/8/31/se_20213f3ca71d-437b-4dcb-9621-451889b94e0b.gif"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p><p style="text-align: center;" align="center"><br></p>
+
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+</div>
+<a class="cta" onclick="location.href='index.html'" style="cursor: pointer;">거래 요청 하기</a>
+
+
+<!-- Links -->
+<section class="links">
+    <div class="links-inner">
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어 </div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

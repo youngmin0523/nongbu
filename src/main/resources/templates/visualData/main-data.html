@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <link   th:href="@{/css/mainpage.css}"
+          href="/css/mainpage.css" rel="stylesheet">
+
+  <title>Title</title>
+</head>
+<body>
+<div>
+  <div> <text>YBOT</text> </div>
+  <div class="top">
+    <div class="top-left">
+      <button class="top-button">고객센터</button>
+    </div>
+    <div class="top-right">
+      <button class="top-button"
+              th:onclick="|location.href='@{/join}'|"
+              type="button">로그인</button>
+      <button class="top-button"
+              th:onclick="|location.href='@{/join}'|"
+              type="button">회원가입</button>
+      <button class="top-button"
+              th:onclick="|location.href='@{/join}'|"
+              type="button">마이페이지</button>
+    </div>
+  </div>
+
+  <div class="top">
+    <button class="top-button"
+            th:onclick="|location.href='@{/data}'|">데이터확인</button>
+    <button class="top-button"
+            th:onclick="|location.href='@{/main}'|"
+            type="button">선물거래</button>
+    <button class="top-button"
+            th:onclick="|location.href='@{/crowd}'|"
+            type="button">크라우드펀딩</button>
+    <button class="top-button">현물거래</button>
+  </div>
+
+
+  <div style="margin-top: 30px; text-align: -webkit-center;">
+  <table style="margin-top: 30px;">
+    <tr>
+      <td>
+        <img th:src="@{/img/데이터.PNG}"
+             th:onclick="|location.href='@{basic/items}'|"
+             type="button" />
+      </td>
+      <td>
+        <img th:src="@{/img/데이터지도.PNG}"
+             th:onclick="|location.href='@{basic/items}'|"
+             type="button" />
+      </td>
+    <tr>
+  </table>
+  </div>
+
+</div>
+</body>
+</html>

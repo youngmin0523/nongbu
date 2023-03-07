@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link   th:href="@{/css/mainpage.css}"
+            href="/css/mainpage.css" rel="stylesheet">
+
+    <title>Title</title>
+</head>
+<body>
+<div style="padding-left:20px; padding-right: 20px;">
+    <div> <text>YBOT</text> </div>
+    <div class="top">
+        <div class="top-left">
+            <button class="top-button">고객센터</button>
+        </div>
+        <div class="top-right">
+            <button class="top-button"
+                    th:onclick="|location.href='@{/join}'|"
+                    type="button">로그인</button>
+            <button class="top-button"
+                    th:onclick="|location.href='@{/join}'|"
+                    type="button">회원가입</button>
+            <button class="top-button"
+                    th:onclick="|location.href='@{/join}'|"
+                    type="button">마이페이지</button>
+        </div>
+    </div>
+
+    <div class="top">
+        <button class="top-button"
+                th:onclick="|location.href='@{/data}'|">데이터확인</button>
+        <button class="top-button"
+                th:onclick="|location.href='@{/main}'|"
+                type="button">선물거래</button>
+        <button class="top-button"
+                th:onclick="|location.href='@{/crowd}'|"
+                type="button">크라우드펀딩</button>
+        <button class="top-button">현물거래</button>
+    </div>
+
+    <div class = "center">
+        <text>카테고리</text> <br>
+        <button class="item-button">전체 품목</button>
+
+
+        <button class="item-button"
+                th:onclick="|location.href='@{/basic/items}'|"
+                type="button">사진1</button>
+
+        <button class="item-button"
+                th:onclick="|location.href='@{/basic/items}'|"
+                type="button">사진2</button>
+
+        <button class="item-button"
+                th:onclick="|location.href='@{/basic/items}'|"
+                type="button">사진3</button>
+
+
+        <button class="item-button">사진4</button>
+        <button class="item-button">사진5</button>
+    </div>
+
+    <div class = "center">
+        <text>추천 상품</text> <br>
+        <button class="item-button">사진1</button>
+        <button class="item-button">사진2</button>
+        <button class="item-button">사진3</button>
+        <button class="item-button">사진4</button>
+        <button class="item-button">사진5</button>
+    </div>
+
+    <div class = "center">
+        <text>판매량 TOP5</text> <br>
+        <button class="item-button">사진1</button>
+        <button class="item-button">사진2</button>
+        <button class="item-button">사진3</button>
+        <button class="item-button">사진4</button>
+        <button class="item-button">사진5</button>
+    </div>
+
+</div>
+</body>
+</html>

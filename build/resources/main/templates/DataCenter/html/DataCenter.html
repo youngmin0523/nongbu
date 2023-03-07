@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<title>Data Center</title>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+	<!--BootStrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{/css/DataCenter.css}" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/button.css}">
+
+<!-- rMateChartH5 라이센스 -->
+<script type="text/javascript"  th:src="@{/LicenseKey/rMateMapChartH5License.js}"></script>
+<!-- rMateMapChartH5 라이브러리 -->
+<script type="text/javascript"  th:src="@{rMateMapChartH5/JS/rMateMapChartH5.js}"></script>
+<!-- rMateMapChartH5 CSS -->
+<link rel="stylesheet" type="text/css"  th:href="@{rMateMapChartH5/Assets/rMateMapChartH5.css}"/>
+
+	<!--Chart.js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body scroll=auto>
+	<div id="title"> <b>데이터 센터</b> </div>
+	<div id="dataCenter">
+		<!-- Chart -->
+		<div id="stateGraph" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">품목별 도매정보</h6>
+			</div>
+			<!-- Chart Body -->
+			<div class="chartbody">
+				<div id="stateGraphItems">
+					<div id="stateGraphItem1" class="stateGraphItem">
+					</div>
+					<div id="stateGraphItem2" class="stateGraphItem">
+					</div>
+					<div id="stateGraphItem3" class="stateGraphItem">
+					</div>
+					<div id="stateGraphItem4" class="stateGraphItem">
+					</div>
+					<div id="stateGraphItem5" class="stateGraphItem">
+					</div>
+					<div id="stateGraphItem6" class="stateGraphItem">
+					</div>
+				</div>
+				<div id="buttons">
+					<button type="btnPrev" class="btnPrev"><span>이전</span></button>
+					<button type="btnNext" class="btnNext"><span>다음</span></button>
+				</div>
+			</div>
+		</div>
+		<div id="itemRank" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">거래품목별 랭킹</h6>
+			</div>
+			<!-- Chart Body -->
+			<div class="rankingBox">
+				<span class="rankTitle">주간 인기 거래품목</span>
+				<div class="rankByVolumeTable scrollBar">
+				</div>
+			</div>
+			<div class="rankingBox">
+				<span class="rankTitle">주간 가격 상승품목</span>
+				<div class="rankByPriceUpTable scrollBar">
+				</div>
+			</div>
+			<div class="rankingBox">
+				<span class="rankTitle">주간 가격 하락품목</span>
+				<div class="rankByPriceDownTable scrollBar">
+				</div>
+			</div>
+		</div>
+		<div id="mapChart" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">도매정보 시각화 지도</h6>
+			</div>
+			<!-- Chart Body -->
+			<div class="chartbody">
+				<div id="content1">
+					<select id ="itemSelect" class="selectbox-size form-select" aria-label="Default select example">
+					</select>
+<!--					<select id = "kindSelect" class="selectbox-size form-select" aria-label="Default select example">-->
+<!--						<option selected>품종</option>-->
+<!--						<option value="1">기타</option>-->
+<!--						<option value="2">금싸라기</option>-->
+<!--						<option value="3">오복</option>-->
+<!--						<option value="4">노랑참외</option>-->
+<!--						<option value="5">스마트꿀</option>-->
+<!--						<option value="6">조은대</option>-->
+<!--					</select>-->
+					<span id="mapData" class= "content1-data">
+					</span>
+				</div>
+				<div id="content2">
+					<!-- 차트가 삽입될 DIV -->
+					<div id="mapHolder"></div>
+				</div>
+				<div id="content5">
+				</div>
+			</div>
+		</div>
+		<div id="stateDetailGraph" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">품목별 상세 도매정보</h6>
+			</div>
+			<!-- Chart Body -->
+			<div id="content4">
+				<div id="detailChartLeft">
+					<div id="searchTerm">
+						<p style="margin-left:20px; margin-top:5px;"> 조회기간</p>
+						<div id="searchBtns">
+							<button id="intervalDate" class="bong-btn btn-outline-secondary searchDuringBtn"> 일 </button>
+							<button id="interval6Month" class="bong-btn btn-outline-secondary searchDuringBtn"> 순 </button>
+							<button id="intervalMonth" class="bong-btn btn-outline-secondary searchDuringBtn"> 월 </button>
+							<button id="interval3Month" class="bong-btn btn-outline-secondary searchDuringBtn"> 분기 </button>
+							<button id="intervalYear" class="bong-btn btn-outline-secondary searchDuringBtn"> 년 </button>
+						</div>
+						<form class="searchForm">
+							<input id="startDate" class="from" type='date' name='searchFrom' />
+							<span style="font-weight: 900; font-size: 22px;"> 부터</span>
+							<input id="endDate" class="to" type='date' name='searchTo' />
+							<span style="font-weight: 900; font-size: 22px;"> 까지</span>
+						</form>
+						<button id="dateSearch" class="searchBtn btn btn-primary" type="button">검색</button>
+					</div>
+					<div id="searchItem">
+						<p style="margin-left:20px; margin-top:5px;"> 품목검색</p>
+						<div class="searchBtn2 input-group mb-3">
+							<input id="itemSearchInput" type="text" class="form-control" placeholder="품목을 입력하세요" >
+							<button id="itemSearchBtn" class="btn btn-outline-secondary" type="button">품목검색</button>
+						</div>
+						<div class="searchItems scrollBar">
+						</div>
+						<p style="margin-left:20px; margin-top:5px;"> 협동조합 검색</p>
+						<div class="searchBtn2 input-group mb-3">
+							<input id="MarketSearchInput" type="text" class="form-control" placeholder="협동조합을 입력하세요" >
+							<button id="MarketSearchBtn" class="btn btn-outline-secondary" type="button">검색하기</button>
+						</div>
+						<div class="searchMarkets scrollBar">
+						</div>
+					</div>
+					<div id="searchTermButtons">
+					</div>
+				</div>
+				<div id="graph-wrap">
+				</div>
+				<div id="kind-graph-wrap">
+				</div>
+
+			</div>
+		</div>
+		</div>
+		</div>
+	<object id="testData" data="${recordCount}" type=""></object>
+	<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"></script>
+	<script th:inline="javascript" type="text/javascript" th:src="@{/js/datacenter.js}"></script>
+
+</body>
+</html>

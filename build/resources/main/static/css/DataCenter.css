@@ -1,0 +1,396 @@
+#title{
+    font-size: 30px;
+    text-align: center;
+}
+
+#dataCenter{
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 1800px;
+    height: 2500px;
+    border: 1px solid rgb(204, 198, 198);
+    border-radius: 20px;
+    position: relative;
+}
+
+#stateGraph{
+    top: 20px;
+    left: 30px;
+    width: 850px;
+    height: 630px;
+    position: absolute;
+}
+
+.chartbody{
+    top: 70px;
+    left: 31px;
+    position: absolute;
+}
+
+#stateGraphItems{
+
+}
+
+.stateGraphItem {
+    width: 260px;
+    height: 250px;
+    display: inline-block;
+    border: 1px solid rgb(204, 198, 198);
+    float: left;
+}
+
+.chart-area{
+    top: -20px;
+    left: -15px;
+    position: relative;
+}
+
+.item-header {
+    text-align: center !important;
+}
+
+.item-body{
+    
+}
+
+#itemRank{
+    top: 670px;
+    left: 30px;
+    width: 850px;
+    height: 420px;
+    position: absolute;
+}
+
+.rankingBox{
+    left: 0px;
+    width: 270px;
+    height: 390px;
+    display:  inline-block;
+    margin-top: 8px;
+    margin-left: 8px;
+    position: relative;
+}
+
+.rankTitle{
+    top: 10px;
+    left:20px;
+    font-weight: 900;
+    font-size: 20px;
+    position: relative;
+}
+
+.rankByVolumeTable, .rankByPriceUpTable, .rankByPriceDownTable{
+    top: 15px;
+    height: 300px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.td-name{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.scrollBar::-webkit-scrollbar {
+    width: 5px;  /* 스크롤바의 너비 */
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #217af4; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+.selectbox-size{
+    top: 3px;
+    left: 5px;
+    width: 200px;
+    height: 50px;
+    display: inline;
+    position: relative;
+}
+.content1-data{
+    font-size: 16px;
+    top: 5px;
+    left: 9px;
+    position: relative;
+}
+
+#mapChart{
+    top: 20px;
+    left: 900px;
+    width: 865px;
+    height: 1070px;
+    position: absolute;
+}
+
+.selectedItem{
+    top: 155px;
+    left: 113px;
+    font-size: 30px;
+    position: absolute;
+}
+
+
+#doughnut1{
+    top: 5px;
+    left: 100px;
+    position: absolute;
+}
+
+#doughnut2{
+    top: 330px;
+    left: 100px;
+    position: absolute;
+}
+
+.doughnut-title{
+    top: 290px;
+    left:85px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+}
+
+#content1{
+	width: 850px;
+	height: 60px;
+	left: -30px;
+	position: relative;
+
+}
+
+#content2{
+	width:850px;
+	height:550px;
+	top: 0px;
+	left: -30px;
+	position: relative;
+}
+#content3{
+	width: 850px;
+	height: 380px;
+	left: 50px;
+	position: relative;
+}
+
+
+#mapHolder,.mapHolder {
+	width:100%;
+	height:100%;
+}
+
+#stateDetailGraph{
+    top: 1100px;
+    left:20px;
+	width:1750px;
+	height:1180px;
+    position: relative;
+}
+
+#content4{
+    top:20px;
+    left:20px;
+    width: 1710px;
+	height: 740px;
+	position: relative;
+}
+
+#content5{
+    top:20px;
+    left:-10px;
+    width: 825px;
+	height: 365px;
+    position: relative;
+}
+
+#detailChartLeft{
+    top: 40px;
+    left:20px;
+    width: 300px;
+	height: 720px;
+}
+
+#graph-wrap{
+    top: 25px;
+    left: 300px;
+    width: 1420px;
+	height: 1050px;
+    position: absolute;
+    overflow : hidden;
+}
+
+#kind-graph-wrap{
+    top: 25px;
+    left: 300px;
+    position: absolute;
+}
+
+#rankKindPrice{
+    top: 50px;
+    left: 0px;
+    width: 710px;
+    height: 350px;
+    position: absolute;
+}
+#rankKindQuantity{
+    top: 50px;
+    left: 710px;
+    width: 710px;
+    height: 350px;
+    position: absolute;
+}
+#detailGraph{
+    top: 400px;
+    position: absolute;
+}
+.detailChart {
+    top: 50px;
+    left: 20px;
+    width: 1350px;
+	height: 600px;
+    position: absolute;
+    overflow-x: auto;
+}
+
+#FixedLeftYAxis {
+    top: 50px;
+    left: -50px;
+    float :left;
+    position: absolute;
+}
+
+#FixedRightYAxis {
+    top: 50px;
+    left: 1370px;
+    position: absolute;
+}
+
+
+#searchTerm{
+    top: 40px;
+    left:20px;
+    width: 300px;
+	height: 206px;
+	z-index: 1;
+}
+
+#searchItem{
+    top: 40px;
+    left:20px;
+    width: 300px;
+	height: 250px;
+}
+
+#searchKind{
+    top: 60px;
+    left:20px;
+    width: 300px;
+	height: 200px;
+}
+
+#detailPriceChart{
+    top: 25px;
+    left: 300px;
+    width: 1400px;
+	height: 1675px;
+    position: absolute;
+}
+
+#bar-chart-horizontal1{
+    top:10px;
+    left: 10px;
+    position: absolute;
+}
+
+#bar-chart-horizontal2{
+    top:10px;
+    left: 430px;
+    position: absolute;
+}
+
+#rankArea1{
+    top: 330px;
+    left: 140px;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+}
+
+#rankArea2{
+    top: 330px;
+    left: 540px;
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+}
+
+.searchDuringBtn{
+    width: 20%;
+    height: 40px;
+    float: left;
+}
+
+.searchBtn{
+    top: -5px;
+    left: 15px;
+    width: 270px;
+    height: auto;
+    position: relative;
+}
+
+.searchForm{
+    top: -10px;
+    left: 15px;
+    position: relative;
+}
+
+.from, .to{
+    width: 220px;
+    height: 40px;
+}
+
+#searchBtns{
+    width: 270px;
+    height: 40px;
+    top: -15px;
+    left: 15px;
+    position: relative;
+}
+
+.bong-btn{
+    width: 20%px;
+    float:left;
+}
+
+.searchItems{
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 5px;
+    top: -15px;
+    left: 10px;
+    width: 280px;
+    height: 350px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.searchMarkets{
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 5px;
+    top: -15px;
+    left: 10px;
+    width: 280px;
+    height: 350px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+
+.searchBtn2{
+    top: -10px;
+    width: 280px;
+    left:10px;
+    position: relative;
+}

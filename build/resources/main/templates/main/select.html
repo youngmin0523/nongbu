@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link   th:href="@{/css/select.css}"
+            href="/css/select.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+    <div class="select-top">
+        <table>
+            <tr>
+                <td>
+                    <button class = "select-button" th:onclick="|location.href='@{/data}'|" type="button">
+                        데이터
+                        <br>
+                        확인하기
+                    </button>
+                </td>
+                <td>
+                    <button style="margin-left : 30px;" class = "select-button" th:onclick="|location.href='@{/main}'|" type="button">
+                        구입
+                        <br>
+                        바로가기
+                    </button>
+                </td>
+            <tr>
+        </table>
+
+    </div>
+</body>
+</html>

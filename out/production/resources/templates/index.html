@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/index.css}"
+          href="../static/css/index.css" rel="stylesheet">
+
+    <link th:href="@{/css/mainpage.css}"
+          href="../static/css/mainpage.css" rel="stylesheet">
+
+    <script src="../static/js/index.js" rel="script"></script>
+
+    <title>Title</title>
+</head>
+
+<body>
+<nav class="main-nav">
+    <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+    <ul class="main-menu">
+        <li><a href="index.html"
+               th:href="@{/}">농부아지야</a></li>
+        <li><a href="#">데이터확인</a></li>
+        <li><a href="#">선물거래</a></li>
+        <li><a href="#">뉴스정보</a></li>
+        <li><a href="#">크라우드펀딩(진행예정)</a></li>
+    </ul>
+
+    <ul class="right-menu">
+        <li>
+            <a sec:authorize="isAnonymous()"
+               href="user/login.html"
+               th:href="@{/account/login}">로그인</a>
+            <a sec:authorize="isAuthenticated()"
+               href="/doLogout">로그아웃</a>
+        </li>
+
+        <li>
+            <a sec:authorize="isAnonymous()"
+               href="user/join.html"
+               th:href="@{/account/join}"
+            >회원가입</a>
+        </li>
+
+        <li>
+            <a sec:authorize="isAuthenticated()"
+               href="#"
+               th:onclick="|location.href='@{/test/mypage-customer}'|"
+               type="button">마이페이지</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- 주제 로고 및 설명 -->
+<section class="top-topic">
+    <div>
+        <h>경북에서 제일 저렴한 농산물</h>
+    </div>
+    <div class="logo">
+        <img src="../static/img/로고.PNG"
+             th:src="@{/img/로고.PNG}"/>
+    </div>
+</section>
+
+<!-- 내용 -->
+<section class="contents">
+
+    <!-- 계약거래, 헌딩-->
+    <div class="top-contents">
+        <div>
+            <a href="search/search.html"
+               th:href="@{/search}">
+                <h>최상의 품질을 저렴한 가격에 만나보세요.</h>
+                <br>
+                <h>계약거래</h>
+            </a>
+        </div>
+        <div>
+            <a href="#"
+               th:href="@{/funding}">
+                <h>맛있고 신선한 경북 농산물을 만나보세요</h>
+                <br>
+                <h>펀딩</h>
+
+            </a>
+        </div>
+    </div>
+
+    <!-- 플랫폼 소개, 데이터센터-->
+    <div class="middle-contents">
+        <div>
+            <a href="https://lopsided-offer-da4.notion.site/8ce0100624b449a29a389a073fa308e5">
+                <h>플랫폼소개</h>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h>데이터센터</h>
+            </a>
+        </div>
+    </div>
+
+    <!-- news / 곡물,채소,과일-->
+    <div class="bottom-contents">
+        <div class="news">
+            <h>NEWS</h>
+            <hr>
+            <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27489">
+                <p>농촌진흥청‘지역 주민과 함께하는 개청 60주년 기념행사’펼쳐asd</p>
+            </a>
+            <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27486">
+                <p>맞춤형 신선도 유지 기술로 ‘조생종 양파’ 수출 가능성 확인</p>
+            </a>
+            <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27472">
+                <p>한국농수산식품유통공사, 청년 외식 창업 성공 이끈다</p>
+            </a>
+        </div>
+        <div>
+            <div>
+                <a href="#">
+                    곡물
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    채소
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    과일
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div>
+
+
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어</div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

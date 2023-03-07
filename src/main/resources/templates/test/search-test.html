@@ -1,0 +1,89 @@
+<!--
+https://codepen.io/bradtraversy/pen/ZEGGNRb
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link   th:href="@{/css/main-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link   th:href="@{/css/item-test.css}"
+            href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Title</title>
+    <!--
+    <script>
+        document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+    </script>-->
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+        <test>농부아지야</test>
+        <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
+
+        <ul class="main-menu">
+            <li><a href="#">데이터확인</a></li>
+            <li><a href="#">선물거래</a></li>
+            <li><a href="#">뉴스정보</a></li>
+            <li><a href="#">크라우드펀딩(진행예정)</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a href="#">로그인</a>
+                <a style="display: none" href="#">로그아웃</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+                <a style="display: none" href='#'>정보수정</a>
+            </li>
+            <li>
+                <a href="#">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!--item content-->
+
+    <section>
+
+
+    </section>
+
+</div>
+
+
+
+
+
+<!-- Links -->
+<section class="links">
+    <div class="links-inner">
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div><i class="fas fa-globe fa-2x"></i> 한국어 </div>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
