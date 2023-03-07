@@ -1,6 +1,9 @@
 # nongbu
 농산물 선물거래 플랫폼(농부아지야) - YIS
 
+## 웹 시연 영상
+<https://youtu.be/wFBMzlVzSnM>
+
 ## install
 1. Spring Boot 프로젝트를 pull request 한 후, gradlew build를 통해 build 실행
 2. build/libs 디렉토리 안 jar파일 실행
