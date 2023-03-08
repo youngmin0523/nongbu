@@ -21,6 +21,11 @@
   - Java 11, JDK 1.8.0+, JRE 1.8.0+
   - html, css
   - mySQL
+- Deep-Learning Requirements
+  - anaconda jupyter notebook, google colab
+  - python 3
+  - Tensorflow Keras LSTM XGBoost
+  - numpy, pandas
 
 ## 웹 시연 영상
 - 전체 화면으로 보시면 비교적 깨끗합니다!
