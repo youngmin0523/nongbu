@@ -1,6 +1,27 @@
 # nongbu
 농산물 선물거래 플랫폼(농부아지야) - YIS
 
+## 웹 소개
+- 직거래를 통한 생산자 소비자 가격 이득
+- 농가 소득 안정화
+- 데이터 분석 및 모델 제작을 통한 예측 가격 정보 제공
+- 선물거래 플랫폼으로서 중계 역할 수행
+
+## 개발 환경
+- H/W Platform Requirements(AWS EC2)
+  - vCPU : 2
+  - RAM : 2GB
+  - Storage : 30GB
+  - OS : Linux
+  - Network : Connected to WAN over TCP/IP
+- SW Platform Requirements
+  - Framwork: Spring(Spring Security, Lombok)
+  - Template Engine: Thymeleaf
+  - Implementation Language : Java, Javascript, Python 
+  - Java 11, JDK 1.8.0+, JRE 1.8.0+
+  - html, css
+  - mySQL
+
 ## 웹 시연 영상
 - 전체 화면으로 보시면 비교적 깨끗합니다!
 - <https://youtu.be/wFBMzlVzSnM>
