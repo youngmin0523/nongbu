@@ -15,7 +15,7 @@
   - OS : Linux
   - Network : Connected to WAN over TCP/IP
 - SW Platform Requirements
-  - Framwork: Spring(Spring Security, Lombok)
+  - Framework: Spring(Spring Security, Lombok)
   - Template Engine: Thymeleaf
   - Implementation Language : Java, Javascript, Python 
   - Java 11, JDK 1.8.0+, JRE 1.8.0+
